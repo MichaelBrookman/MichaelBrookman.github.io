@@ -1,0 +1,1161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, viewport-fit=cover">
+<title>Back-Safe 5/3/1</title>
+
+<!-- iOS "Add to Home Screen" support -->
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="531 Log">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="theme-color" content="#14181c">
+<link rel="apple-touch-icon" href="data:image/png;base64,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">
+<link rel="icon" href="data:image/png;base64,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">
+<link rel="manifest" href="data:application/manifest+json;base64,eyJuYW1lIjogIkJhY2stU2FmZSA1LzMvMSIsICJzaG9ydF9uYW1lIjogIjUzMSBMb2ciLCAic3RhcnRfdXJsIjogIi4iLCAiZGlzcGxheSI6ICJzdGFuZGFsb25lIiwgImJhY2tncm91bmRfY29sb3IiOiAiIzE0MTgxYyIsICJ0aGVtZV9jb2xvciI6ICIjMTQxODFjIiwgImljb25zIjogW3sic3JjIjogImRhdGE6aW1hZ2UvcG5nO2Jhc2U2NCxpVkJPUncwS0dnb0FBQUFOU1VoRVVnQUFBTFFBQUFDMENBSUFBQUN5cjVGbEFBQUd3VWxFUVZSNG5PMmRUWEtrT0JDRjZZaytnaGV6bUlVUDVXUDZVRDZBRHpFTElnaWlxQlJDeXArWHFmZXRldE5sNmZHUktWRVUvUG40OTcrTmtIZjhFejBBZ2d2bElDS1VnNGhRRGlKQ09ZZ0k1U0FpbElPSVVBNGlRam1JeU4vb0FVRHc4LzF4L1B2ejZ6ZHdKRkN3Y2hBUnlrRkVLQWNSb1J4RWhISVFrVDlyM3M5eDNwNTBzdUF1WmdrNUJsVG9vYnd1TmVVd3NxRk5QVmRLeVJIaXhKVXlsbFNRQThTSks5a3R5UzBIckJabjhpcVNVbzRVVGx4Slowa3lPWkpxY1NhUkltbmtLS0RGbVJTS0pKQ2ptQlpud0JWQmx3UG4raFhPU056QWxVUDNZS2dmQS9EaHFZQW9oMWJ1Ym9tbkczQW5jSEpNQmgyZWIvYnhuOEdTWXlaWnFGaHJUQVJGanVFMGNhSjhTK3A1T2QzczA4NW9MTUhQcjErRUJOc01EN0tSaWR2ZTNxTnlISk41RzlNNjk5Mm96TFFkcGk3bWNyd2s4aktscDNrbDFlTE16SlRiWWFyaldqbDI5aW10VXpDdWpNM2QyWXpOYlVGYWFZT25CZjZPeG1sQk9qT1prbVpzRS9OeUM4UjFLN3ZnQ3FPSFI3RjRab0w3dTVWRnpOZ2V6dFR6TzJvL09XRFBEd1F3L1lCN0JNTnFXaHdNYitMc2dMaENlckNzR1FlZENmZzQ1Q0VIelhnRWpoL21jdENNQVVEOHNKV0RaZ3lENEVmOFZwWm1TSVFuWXloSGo5VGg4d2VuSngrNzRtRWxCODNRSXRBUEV6bWdOdXVMWUpGNTJKcURaYU9mcUt6MDVXQkRzU0NrdVFSVURwb3hobjl1eW5Kd3RSR0xidjZhY3JDaFdPUGNYRnpiQ3MyWUorWE5QbXdvT0dnZEM3L0t3YktoaFZ1U09uTGNxa296ZExuTlU2VjR4SC94Um1CUnVQczhkZG5nNEJ2QTNVUHF3S09TdS9JYnZzemJDbFNnUDk4Zk04MTQ4cityWTUzdGJPV0FDa3RDZDVDZXYzT2Y1T2Y3WTJhUXRwVURJVDQ3ZlJGT0ROT0VwK1JBU0tlQlF4ZEFhelJYWm9aWGRrSGFIMHJqNU92OGtNbnFEY3ZVVnJhZFhXQmVGbnM4NUUydjBZRVlieXV3NWZRMnFiR3didjlqMGtBYVdDMUlvMDZqUmhBcUQ1aHJmMGlVSDBacGw3cDhMaDBiOWVjT05qNFF0bjRNTUNnSFlBUU5NNHorWWlJL3hvWlVwSEw0bTlIK2ZFQS9CakNSdzNuQkVXVkcrNjg0KzJFeDJTS1Y0NHFub0NVdmNtd0Y1SGg3Z3ZvZkxhMkhNME14SWdmT25FSE1hUHhkOEt6YTZGZU9xalVXSC9YazA3ZVZGMkxWTEhaaUpKWURwMkszeVRMT0s0bmx1SUp3NGlLTVFZdXNjdVE2SFhPTjl1Q3hITEJmMCtPY3NyQWhQSFUwYStVZ0RsQU9JcEpTam93dFBPT1lVOHB4QldmQnNZTTJuakdLeUVFc3VMbjdQR014SkZxVS9Xa0NlY3YxYkc5MFFMWVZJa0k1aU1oTlcybThMcHVVaDJ1T3RYaTB4MlpiSVNKRjVFQnJkbWpqR1NPbEhCbXZQMlljYzBvNWlBK1VnNGc4bGdQMk1RUTRiUjQyaEtldExXdmx5TlhDYzQzMklLc2NiMEVvSGdoajBDS3hIRmxPeHl6anZKSllqcmZFbnJpVnlzWVc5UUpBWWdIRUN3Qng2aVRVYjVlaGZ0VjlaV0FrNmRzS2lCL2dab3lSWGc0SlR6K3FkdElLcnl1UGZmQlM3RU9uYm9jeFE1SEtFZVVIaUJsR0RNb0JPSGwvUHhLWk1UYWtJcFZqcCtHSCtpdFhFcGt4akpVY2dBOTZWbEdrL1NHQUQvV2VZVndPMkZQazludmpzU2h2LzJQU1FCb1l2bEpqQTM3THhCbVZCOTBqejNSNGJHWHZQdi84K3UxL2xjNzgzNXI4QkV5bTFoemdvYWkvTENIa1QweUMrd0pBaEV1SC9tOU44TVEwNGRtMjBsKzlBem1Pb3NwUUVaem9aSEtvNXRjNW9OU1o3QUpvVGNRNjI3SUwwZ2JuQTR5ODRRcG5haXQ3d0lqOWNjaTgxT1Z6b291T0hMZVNRcTA4Q3VCVHF2MHFCLzNRd2kxSk5UbTRxc0JCNjFpNHJqbFlQT2J4ekZCVGpoNWg2Y2NNUGVrcGxuRGx5c0htRW90dS9nRmJXUmFQTWZ4emkza0JJUDE0aW5ORDJRbTdDRVkvK29uS3FzTHJ5c21XNjNYbGJDNWFoRFNVSGNPMlFqL21DVFJqUS9qaWpYNUloQ2RqSzBlbjFPRXBBTktaaWVueXpyeHkwSThCRU16WWZOb0svWGdFaUJtYjI1cURmblNDWThZR2VBL3BuczZDVjBvQVR3eS8zY3FqNHcyWWxDbVA1dXQyNXVEZUNiYU9IN0F6MWJuNy9KYVorUmR1TWNPeCtHVGlVVGxlSW5nNk1kZ1RhNUtaZWZsa1lsNDVKRE1HcGxlbWhBelBmZkkwZTRwSFd6bW1OUCt1eVFKK1RFNjVFYVk2Zm1zT3hRZTZKVlZFYTZhTk1IVnhrcVBOV0FkTnBFalNDVUxJc2NHdjI0ZEpQUzhVT1hiSzdIaHJUQVJMam0xNmt4YWViUGJ4bjRHVFk5UGJ4THNGblc3QW5TREtzYU43blVjOWQvRGhxWUFyeDQ3UnBjQ0JnNEV6RWpmUTVkanFYajdmc00zWVVzaXhVMHdSY0MxMjBzaXhVMENSRkZyc0pKTmpKNmtpaWJUWVNTbkhRUXBMMGpseGtGdU9IVmhGOG1xeFUwR09BeEJMc2p0eFVFcU9neEJMeWpoeFVGT09GeGE4ZnFYQ0VuSmNXZWNPb3hrV2xlTXRaMk1XVk9GSy9DTVlDQ3lVZzRoUURpSkNPWWdJNVNBaTNLMFFFVllPSWtJNWlBamxJQ0tVZzRoUURpSkNPWWdJNVNBaWxJT0kvQS8xTUNlSGZ3Wlg4QUFBQUFCSlJVNUVya0pnZ2c9PSIsICJzaXplcyI6ICIxODB4MTgwIiwgInR5cGUiOiAiaW1hZ2UvcG5nIn1dfQ==">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#14181c;
+    --surface:#1b2126;
+    --surface-2:#222a30;
+    --border:#2e373d;
+    --text:#edeff0;
+    --text-muted:#8b949c;
+    --yellow:#f4c430;
+    --yellow-dim:#c79a1e;
+    --green:#5fb86e;
+    --green-dim:#274a30;
+    --rust:#c1622d;
+    --rust-dim:#4a2f1e;
+    --grey-deload:#4a5259;
+    --radius:14px;
+    --safe-bottom: env(safe-area-inset-bottom, 0px);
+  }
+  *{box-sizing:border-box;}
+  html,body{margin:0;padding:0;}
+  body{
+    background:var(--bg);
+    color:var(--text);
+    font-family:'Inter',sans-serif;
+    -webkit-font-smoothing:antialiased;
+    min-height:100vh;
+    padding-bottom:calc(72px + var(--safe-bottom));
+  }
+  .mono{font-family:'JetBrains Mono',monospace;}
+  .display{font-family:'Oswald',sans-serif; text-transform:uppercase; letter-spacing:0.04em;}
+
+  .hazard{
+    height:6px;
+    background:repeating-linear-gradient(135deg, var(--yellow) 0 10px, #14181c 10px 20px);
+    opacity:0.9;
+  }
+  header.top{
+    position:sticky; top:0; z-index:20;
+    background:var(--bg);
+  }
+  .top-inner{
+    padding:18px 18px 12px;
+    display:flex; align-items:baseline; justify-content:space-between;
+  }
+  .brand{
+    font-family:'Oswald',sans-serif; font-weight:700; font-size:20px;
+    letter-spacing:0.03em; text-transform:uppercase;
+  }
+  .brand span{color:var(--yellow);}
+  .cycle-pill{
+    font-family:'JetBrains Mono',monospace; font-size:12px; font-weight:700;
+    background:var(--surface-2); border:1px solid var(--border);
+    padding:5px 10px; border-radius:999px; color:var(--text-muted);
+  }
+  .cycle-pill b{color:var(--yellow);}
+
+  main{padding:14px 14px 24px;}
+  .screen{display:none;}
+  .screen.active{display:block; animation:fade .18s ease;}
+  @keyframes fade{from{opacity:0; transform:translateY(4px);} to{opacity:1; transform:none;}}
+
+  .card{
+    background:var(--surface);
+    border:1px solid var(--border);
+    border-radius:var(--radius);
+    padding:16px;
+    margin-bottom:12px;
+  }
+  .card.tight{padding:12px 14px;}
+  .section-label{
+    font-family:'Oswald',sans-serif; font-size:12px; font-weight:600;
+    letter-spacing:0.12em; text-transform:uppercase; color:var(--text-muted);
+    margin:0 0 10px 2px;
+  }
+  .row{display:flex; align-items:center; justify-content:space-between; gap:10px;}
+  .muted{color:var(--text-muted);}
+  small.muted{font-size:12.5px; line-height:1.5;}
+
+  /* ---- Workout screen ---- */
+  .session-nav{display:flex; align-items:center; justify-content:space-between; margin-bottom:12px;}
+  .nav-btn{
+    background:var(--surface-2); border:1px solid var(--border); color:var(--text);
+    width:40px; height:40px; border-radius:10px; font-size:18px;
+    display:flex; align-items:center; justify-content:center;
+  }
+  .nav-btn:active{background:var(--border);}
+  .session-title{text-align:center;}
+  .session-title .num{font-family:'Oswald',sans-serif; font-weight:700; font-size:22px;}
+  .session-title .sub{font-size:12px; color:var(--text-muted); margin-top:2px;}
+
+  .workout-badge{
+    display:inline-block; font-family:'Oswald',sans-serif; font-weight:600; font-size:11px;
+    letter-spacing:0.1em; text-transform:uppercase; padding:4px 9px; border-radius:6px;
+  }
+  .badge-A{background:var(--green-dim); color:var(--green);}
+  .badge-B{background:var(--rust-dim); color:#e8935e;}
+  .badge-deload{background:#2c3238; color:var(--grey-deload); border:1px dashed var(--grey-deload);}
+
+  .exercise{
+    border-left:3px solid var(--border);
+    padding-left:12px;
+    margin-bottom:16px;
+  }
+  .exercise.main{border-left-color:var(--yellow);}
+  .exercise-name{font-family:'Oswald',sans-serif; font-weight:600; font-size:15.5px; margin-bottom:2px;}
+  .exercise-cue{font-size:12px; color:var(--text-muted); margin-bottom:10px;}
+  .set-row{
+    display:flex; align-items:center; gap:10px;
+    padding:8px 0; border-top:1px solid var(--border);
+  }
+  .set-row:first-of-type{border-top:none;}
+  .set-idx{
+    font-family:'JetBrains Mono',monospace; font-size:11px; color:var(--text-muted);
+    width:20px; flex-shrink:0;
+  }
+  .plate{
+    display:flex; align-items:baseline; gap:4px;
+    font-family:'JetBrains Mono',monospace; font-weight:700; font-size:20px;
+    background:var(--surface-2); border-radius:999px; padding:6px 14px;
+    min-width:88px; justify-content:center;
+    border:2px solid var(--border);
+  }
+  .plate .unit{font-size:11px; font-weight:500; color:var(--text-muted);}
+  .set-reps{font-family:'JetBrains Mono',monospace; font-size:13px; color:var(--text-muted); width:44px;}
+  .set-pct{font-family:'JetBrains Mono',monospace; font-size:11px; color:var(--yellow-dim); width:40px;}
+  .used-input{
+    flex:1; min-width:0;
+    background:var(--surface-2); border:1px solid var(--border); color:var(--text);
+    font-family:'JetBrains Mono',monospace; font-size:14px; text-align:right;
+    padding:8px 10px; border-radius:8px;
+  }
+  .used-input::placeholder{color:#57616a;}
+  .used-input:focus{outline:none; border-color:var(--yellow);}
+
+  .accessory-row{
+    display:flex; align-items:center; justify-content:space-between; gap:10px;
+    padding:8px 0; border-top:1px solid var(--border);
+  }
+  .accessory-row:first-of-type{border-top:none;}
+  .accessory-meta{font-size:12px; color:var(--text-muted);}
+
+  .deload-flag{
+    background:var(--surface-2); border:1px dashed var(--grey-deload);
+    border-radius:10px; padding:10px 12px; font-size:12.5px; color:#b8bec3;
+    margin-bottom:14px;
+  }
+
+  .primary-btn{
+    width:100%; padding:14px; border:none; border-radius:12px;
+    background:var(--yellow); color:#1a1500; font-family:'Oswald',sans-serif;
+    font-weight:700; font-size:14px; letter-spacing:0.05em; text-transform:uppercase;
+  }
+  .primary-btn:active{background:var(--yellow-dim);}
+  .ghost-btn{
+    width:100%; padding:12px; border:1px solid var(--border); border-radius:12px;
+    background:transparent; color:var(--text); font-family:'Oswald',sans-serif;
+    font-weight:600; font-size:13px; letter-spacing:0.04em; text-transform:uppercase;
+  }
+  .small-btn{
+    padding:8px 12px; border:1px solid var(--border); border-radius:8px;
+    background:var(--surface-2); color:var(--text); font-size:12px; font-weight:600;
+  }
+
+  /* ---- Schedule accordion ---- */
+  .acc-item{
+    background:var(--surface); border:1px solid var(--border); border-radius:12px;
+    margin-bottom:8px; overflow:hidden;
+  }
+  .acc-item.today{border-color:var(--yellow);}
+  .acc-head{
+    display:flex; align-items:center; justify-content:space-between;
+    padding:12px 14px; gap:10px;
+  }
+  .acc-head .left{display:flex; align-items:center; gap:10px;}
+  .acc-num{font-family:'JetBrains Mono',monospace; font-size:12px; color:var(--text-muted);}
+  .today-tag{
+    font-family:'Oswald',sans-serif; font-size:10px; font-weight:700; letter-spacing:0.08em;
+    color:#1a1500; background:var(--yellow); padding:2px 7px; border-radius:5px;
+  }
+  .chev{color:var(--text-muted); font-size:12px; transition:transform .15s;}
+  .acc-body{display:none; padding:0 14px 14px;}
+  .acc-item.open .acc-body{display:block;}
+  .acc-item.open .chev{transform:rotate(180deg);}
+  .mini-ex{font-size:12.5px; color:var(--text-muted); padding:3px 0;}
+  .mini-ex b{color:var(--text); font-weight:600;}
+
+  /* ---- Cycles tab ---- */
+  .subtabs{display:flex; gap:8px; margin-bottom:14px;}
+  .subtab{
+    flex:1; text-align:center; padding:9px; border-radius:10px;
+    border:1px solid var(--border); background:var(--surface-2);
+    font-family:'Oswald',sans-serif; font-size:12px; font-weight:600; letter-spacing:0.04em;
+    text-transform:uppercase; color:var(--text-muted);
+  }
+  .subtab.active{background:var(--yellow); color:#1a1500; border-color:var(--yellow);}
+
+  .cycle-row{
+    display:grid; grid-template-columns:32px 1fr 1fr 1fr; gap:8px;
+    align-items:center; padding:10px 0; border-top:1px solid var(--border);
+  }
+  .cycle-row:first-of-type{border-top:none;}
+  .cycle-row.current{background:rgba(244,196,48,0.06); margin:0 -14px; padding:10px 14px; border-radius:8px;}
+  .cycle-num{font-family:'JetBrains Mono',monospace; font-weight:700; font-size:13px;}
+  .cycle-lift-label{font-size:9.5px; text-transform:uppercase; letter-spacing:0.05em; color:var(--text-muted); display:block; margin-bottom:2px;}
+  .cycle-tm{font-family:'JetBrains Mono',monospace; font-size:13.5px; font-weight:600;}
+  .cycle-header-row{
+    display:grid; grid-template-columns:32px 1fr 1fr 1fr; gap:8px;
+    font-size:10px; text-transform:uppercase; letter-spacing:0.06em; color:var(--text-muted);
+    padding-bottom:8px; border-bottom:1px solid var(--border); margin-bottom:2px;
+  }
+
+  .field{margin-bottom:12px;}
+  .field label{display:block; font-size:12px; color:var(--text-muted); margin-bottom:6px;}
+  .field input{
+    width:100%; background:var(--surface-2); border:1px solid var(--border); color:var(--text);
+    padding:11px 12px; border-radius:10px; font-family:'JetBrains Mono',monospace; font-size:15px;
+  }
+  .field input:focus{outline:none; border-color:var(--yellow);}
+  .field-row{display:flex; gap:10px;}
+  .field-row .field{flex:1;}
+
+  .result-box{
+    background:var(--surface-2); border:1px solid var(--yellow-dim); border-radius:12px;
+    padding:14px; margin:14px 0; text-align:center;
+  }
+  .result-box .big{font-family:'JetBrains Mono',monospace; font-weight:700; font-size:28px; color:var(--yellow);}
+  .result-box .lbl{font-size:11px; color:var(--text-muted); text-transform:uppercase; letter-spacing:0.08em; margin-top:2px;}
+  .result-sub{font-size:11.5px; color:var(--text-muted); margin-top:8px;}
+
+  /* ---- Bottom nav ---- */
+  nav.bottom{
+    position:fixed; bottom:0; left:0; right:0; z-index:30;
+    background:var(--surface); border-top:1px solid var(--border);
+    padding-bottom:var(--safe-bottom);
+  }
+  .nav-grid{display:grid; grid-template-columns:repeat(4,1fr);}
+  .nav-item{
+    display:flex; flex-direction:column; align-items:center; gap:4px;
+    padding:10px 0 8px; color:var(--text-muted);
+  }
+  .nav-item.active{color:var(--yellow);}
+  .nav-item svg{width:20px; height:20px;}
+  .nav-item .lbl{font-family:'Oswald',sans-serif; font-size:10px; letter-spacing:0.04em; text-transform:uppercase;}
+
+  .toast{
+    position:fixed; bottom:calc(84px + var(--safe-bottom)); left:50%; transform:translateX(-50%);
+    background:var(--surface-2); border:1px solid var(--yellow-dim); color:var(--text);
+    padding:9px 16px; border-radius:999px; font-size:12.5px; z-index:40;
+    opacity:0; pointer-events:none; transition:opacity .2s;
+  }
+  .toast.show{opacity:1;}
+
+  .divider-stripe{
+    height:4px; margin:16px 0;
+    background:repeating-linear-gradient(135deg, var(--yellow) 0 8px, transparent 8px 16px);
+    opacity:0.4; border-radius:2px;
+  }
+
+  .confirm-overlay{
+    position:fixed; inset:0; background:rgba(0,0,0,0.6); z-index:50;
+    display:none; align-items:flex-end; justify-content:center;
+  }
+  .confirm-overlay.show{display:flex;}
+  .confirm-sheet{
+    background:var(--surface); border:1px solid var(--border); border-radius:16px 16px 0 0;
+    padding:20px; width:100%; max-width:480px;
+  }
+  .confirm-sheet h3{font-family:'Oswald',sans-serif; margin:0 0 8px; font-size:17px;}
+  .confirm-sheet p{font-size:13px; color:var(--text-muted); margin:0 0 16px; line-height:1.5;}
+  .confirm-actions{display:flex; gap:10px;}
+  .confirm-actions button{flex:1;}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="top-inner">
+    <div class="brand">Back-<span>Safe</span> 5/3/1</div>
+    <div class="cycle-pill">CYCLE <b id="cyclePillNum">1</b></div>
+  </div>
+  <div class="hazard"></div>
+  <div id="storageBanner" style="display:none; background:var(--rust-dim); color:#f4c9a8; font-size:12px; padding:9px 14px; line-height:1.4;"></div>
+</header>
+
+<main>
+  <!-- WORKOUT SCREEN -->
+  <section class="screen active" id="screen-workout">
+    <div class="session-nav">
+      <button class="nav-btn" id="prevSessionBtn">‹</button>
+      <div class="session-title">
+        <div class="num">SESSION <span id="wSessionNum"></span> / 8</div>
+        <div class="sub" id="wSessionSub"></div>
+      </div>
+      <button class="nav-btn" id="nextSessionBtn">›</button>
+    </div>
+
+    <div id="deloadFlag" class="deload-flag" style="display:none;">
+      ⚠ Deload session — this week is about recovery, not testing limits. Stay well inside these numbers.
+    </div>
+
+    <div id="workoutExercises"></div>
+
+    <button class="primary-btn" id="advanceBtn">Next Session →</button>
+  </section>
+
+  <!-- SCHEDULE SCREEN -->
+  <section class="screen" id="screen-schedule">
+    <div class="section-label">Full Cycle — 8 Sessions</div>
+    <div id="scheduleList"></div>
+  </section>
+
+  <!-- CYCLES SCREEN -->
+  <section class="screen" id="screen-cycles">
+    <div class="subtabs">
+      <div class="subtab active" data-sub="tracker">Tracker</div>
+      <div class="subtab" data-sub="calc">1RM Calculator</div>
+    </div>
+
+    <div id="sub-tracker">
+      <div class="card">
+        <div class="section-label" style="margin-bottom:2px;">Training Max by cycle</div>
+        <small class="muted">Green = current cycle. Tap a cycle's numbers below to override if a real result differed from the projection.</small>
+        <div class="divider-stripe"></div>
+        <div class="cycle-header-row">
+          <div>#</div><div>Bench</div><div>OHP</div><div>Leg Press</div>
+        </div>
+        <div id="cycleList"></div>
+      </div>
+      <button class="primary-btn" id="startNextCycleBtn">Finish Cycle & Start Next →</button>
+    </div>
+
+    <div id="sub-calc" style="display:none;">
+      <div class="card">
+        <div class="section-label">Estimate from a recent set</div>
+        <div class="field">
+          <label>Lift</label>
+          <select id="calcLift" style="width:100%; background:var(--surface-2); border:1px solid var(--border); color:var(--text); padding:11px 12px; border-radius:10px; font-family:'JetBrains Mono',monospace; font-size:14px;">
+            <option value="bench">Bench Press</option>
+            <option value="ohp">Overhead Press</option>
+            <option value="leg">Leg Press</option>
+          </select>
+        </div>
+        <div class="field-row">
+          <div class="field">
+            <label>Weight lifted (kg)</label>
+            <input type="number" inputmode="decimal" id="calcWeight" placeholder="e.g. 60">
+          </div>
+          <div class="field">
+            <label>Reps (≤10)</label>
+            <input type="number" inputmode="numeric" id="calcReps" placeholder="e.g. 5" max="10">
+          </div>
+        </div>
+        <div class="field">
+          <label>Training Max = this % of est. 1RM</label>
+          <input type="number" inputmode="decimal" id="calcPct" placeholder="90">
+        </div>
+        <div class="result-box">
+          <div class="big" id="calcResult1rm">—</div>
+          <div class="lbl">Estimated 1RM (kg)</div>
+        </div>
+        <div class="result-box">
+          <div class="big" id="calcResultTM">—</div>
+          <div class="lbl">Training Max (kg)</div>
+        </div>
+        <div class="result-sub" id="calcBrzycki"></div>
+        <button class="primary-btn" style="margin-top:14px;" id="saveOverrideBtn">Save as Cycle Override</button>
+        <button class="ghost-btn" style="margin-top:8px;" id="saveStartingBtn">Save as Starting Training Max</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- SETTINGS SCREEN -->
+  <section class="screen" id="screen-settings">
+    <div class="card">
+      <div class="section-label">Starting Training Maxes</div>
+      <div class="field"><label>Bench Press TM (kg)</label><input type="number" inputmode="decimal" id="setBenchTM"></div>
+      <div class="field"><label>Overhead Press TM (kg)</label><input type="number" inputmode="decimal" id="setOhpTM"></div>
+      <div class="field"><label>Leg Press TM (kg)</label><input type="number" inputmode="decimal" id="setLegTM"></div>
+    </div>
+    <div class="card">
+      <div class="section-label">Increment per cycle (kg)</div>
+      <div class="field"><label>Bench Press</label><input type="number" inputmode="decimal" id="setBenchInc"></div>
+      <div class="field"><label>Overhead Press</label><input type="number" inputmode="decimal" id="setOhpInc"></div>
+      <div class="field"><label>Leg Press</label><input type="number" inputmode="decimal" id="setLegInc"></div>
+    </div>
+    <div class="card">
+      <div class="section-label">Rounding</div>
+      <div class="field"><label>Bench & Overhead Press, nearest (kg)</label><input type="number" inputmode="decimal" id="setRoundBarbell"></div>
+      <div class="field"><label>Leg Press, nearest (kg)</label><input type="number" inputmode="decimal" id="setRoundLeg"></div>
+    </div>
+    <div class="card">
+      <div class="section-label">Backup & Export</div>
+      <small class="muted" id="storageStatus">Checking save method…</small>
+      <div class="divider-stripe"></div>
+      <small class="muted">Save a backup file to your phone, or load one back in. This works fully offline — no account or connection needed.</small>
+      <button class="primary-btn" style="margin-top:12px;" id="downloadBackupBtn">Save backup (.json)</button>
+      <button class="ghost-btn" style="margin-top:8px;" id="loadBackupBtn">Load backup (.json)</button>
+      <input type="file" id="backupFileInput" accept=".json,application/json" style="display:none;">
+      <div class="divider-stripe"></div>
+      <small class="muted">Or copy/paste as text instead:</small>
+      <button class="ghost-btn" style="margin-top:8px;" id="exportBtn">Export as text</button>
+      <button class="ghost-btn" style="margin-top:8px;" id="importBtn">Import from text</button>
+    </div>
+    <div class="card">
+      <div class="section-label">Danger zone</div>
+      <small class="muted">This clears every saved weight, override, and setting on this device.</small>
+      <button class="ghost-btn" style="margin-top:12px; border-color:var(--rust); color:#e8935e;" id="resetAllBtn">Reset all data</button>
+    </div>
+  </section>
+</main>
+
+<nav class="bottom">
+  <div class="nav-grid">
+    <div class="nav-item active" data-screen="workout">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 8v8M2 10v4M20 10v4M22 8v8M7 12h10M7 8v8M17 8v8"/></svg>
+      <div class="lbl">Workout</div>
+    </div>
+    <div class="nav-item" data-screen="schedule">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="3" y="4" width="18" height="17" rx="2"/><path d="M3 9h18M8 3v3M16 3v3"/></svg>
+      <div class="lbl">Schedule</div>
+    </div>
+    <div class="nav-item" data-screen="cycles">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 12a8 8 0 0114-5.3M20 12a8 8 0 01-14 5.3M14 3v4h-4M10 21v-4h4"/></svg>
+      <div class="lbl">Cycles</div>
+    </div>
+    <div class="nav-item" data-screen="settings">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.7 1.7 0 00.3 1.9l.1.1a2 2 0 11-2.8 2.8l-.1-.1a1.7 1.7 0 00-1.9-.3 1.7 1.7 0 00-1 1.5V21a2 2 0 11-4 0v-.1a1.7 1.7 0 00-1-1.6 1.7 1.7 0 00-1.9.3l-.1.1a2 2 0 11-2.8-2.8l.1-.1a1.7 1.7 0 00.3-1.9 1.7 1.7 0 00-1.5-1H3a2 2 0 110-4h.1a1.7 1.7 0 001.5-1 1.7 1.7 0 00-.3-1.9l-.1-.1a2 2 0 112.8-2.8l.1.1a1.7 1.7 0 001.9.3H9a1.7 1.7 0 001-1.5V3a2 2 0 114 0v.1a1.7 1.7 0 001 1.5 1.7 1.7 0 001.9-.3l.1-.1a2 2 0 112.8 2.8l-.1.1a1.7 1.7 0 00-.3 1.9V9a1.7 1.7 0 001.5 1H21a2 2 0 110 4h-.1a1.7 1.7 0 00-1.5 1z"/></svg>
+      <div class="lbl">Settings</div>
+    </div>
+  </div>
+</nav>
+
+<div class="toast" id="toast"></div>
+
+<div class="confirm-overlay" id="confirmOverlay">
+  <div class="confirm-sheet">
+    <h3 id="confirmTitle">Start next cycle?</h3>
+    <p id="confirmBody"></p>
+    <div class="confirm-actions">
+      <button class="ghost-btn" id="confirmCancel">Cancel</button>
+      <button class="primary-btn" id="confirmOk">Confirm</button>
+    </div>
+  </div>
+</div>
+
+<div class="confirm-overlay" id="dataOverlay">
+  <div class="confirm-sheet">
+    <h3 id="dataTitle">Export data</h3>
+    <p id="dataBody" style="margin-bottom:10px;"></p>
+    <textarea id="dataTextarea" rows="8" style="width:100%; background:var(--surface-2); border:1px solid var(--border); color:var(--text); border-radius:10px; padding:10px; font-family:'JetBrains Mono',monospace; font-size:11.5px; resize:vertical; margin-bottom:12px;"></textarea>
+    <div id="dataCopyRow" class="confirm-actions" style="margin-bottom:8px;">
+      <button class="ghost-btn" id="dataCopyBtn">Copy to clipboard</button>
+    </div>
+    <div class="confirm-actions">
+      <button class="ghost-btn" id="dataCancelBtn">Close</button>
+      <button class="primary-btn" id="dataOkBtn" style="display:none;">Load data</button>
+    </div>
+  </div>
+</div>
+
+<script>
+(function(){
+  "use strict";
+
+  // ---------- Static program data ----------
+  const WAVES = {
+    "5s":     { label:"5s Week",     sets:[{pct:0.65,reps:"5"}, {pct:0.75,reps:"5"}, {pct:0.85,reps:"5+"}] },
+    "3s":     { label:"3s Week",     sets:[{pct:0.70,reps:"3"}, {pct:0.80,reps:"3"}, {pct:0.90,reps:"3+"}] },
+    "1s":     { label:"1s Week",     sets:[{pct:0.75,reps:"5"}, {pct:0.85,reps:"3"}, {pct:0.95,reps:"1+"}] },
+    "Deload": { label:"Deload",      sets:[{pct:0.40,reps:"5"}, {pct:0.50,reps:"5"}, {pct:0.60,reps:"5"}] }
+  };
+  const WAVE_ORDER = ["5s","3s","1s","Deload"];
+
+  const WORKOUT_A_ACCESSORIES = [
+    { key:"dbrows",  name:"Dumbbell Rows",       meta:"3 x 10-12",     cue:"Support torso on a bench" },
+    { key:"goblet",  name:"Goblet Squats",       meta:"3 x 12-15",     cue:"Keep torso completely vertical" },
+    { key:"pallof",  name:"Cable Pallof Press",  meta:"3 x 10-12/side",cue:"Resist twisting; slow reps" }
+  ];
+  const WORKOUT_B_ACCESSORIES = [
+    { key:"backext", name:"Weighted Back Extensions", meta:"3 x 8-12",     cue:"Stop at a straight line; do not arch" },
+    { key:"incline", name:"Incline Dumbbell Press",   meta:"3 x 10-12",    cue:"" },
+    { key:"lunges",  name:"Weighted Walking Lunges",  meta:"3 x 10-12/leg",cue:"Hold dumbbells at sides" },
+    { key:"chair",   name:"Captain's Chair Knee Raises", meta:"3 x 12-15", cue:"Slow, controlled movement" }
+  ];
+
+  // 8 sessions per cycle, strict A/B alternation
+  function sessionPlan(){
+    const out = [];
+    let aOcc = 0, bOcc = 0;
+    for(let i=0;i<8;i++){
+      const workout = (i % 2 === 0) ? "A" : "B";
+      if(workout === "A"){ aOcc++; out.push({idx:i, workout, occurrence:aOcc}); }
+      else { bOcc++; out.push({idx:i, workout, occurrence:bOcc}); }
+    }
+    return out;
+  }
+  const SESSIONS = sessionPlan();
+
+  function mainLiftsFor(workout){
+    return workout === "A"
+      ? [{key:"bench", name:"Bench Press", tmKey:"bench", roundKey:"barbell", cue:"Standard 5/3/1 sets"},
+         {key:"leg",   name:"Leg Press",   tmKey:"leg",   roundKey:"leg",     cue:"Keep hips locked flat against padding"}]
+      : [{key:"ohp",   name:"Overhead Press", tmKey:"ohp", roundKey:"barbell", cue:"Squeeze glutes to protect lower back"}];
+  }
+  function accessoriesFor(workout){ return workout === "A" ? WORKOUT_A_ACCESSORIES : WORKOUT_B_ACCESSORIES; }
+
+  // ---------- State ----------
+  const DEFAULT_SETTINGS = {
+    benchTM:60, ohpTM:35, legTM:140,
+    benchInc:2.5, ohpInc:2.5, legInc:5,
+    roundBarbell:2.5, roundLeg:5,
+    currentCycle:1, currentSession:0,
+    calcPct:90
+  };
+  let state = {
+    settings: {...DEFAULT_SETTINGS},
+    overrides: {},   // { "3": {bench:.., ohp:.., leg:..} }
+    logs: {},        // { "cycle-sessionIdx-exKey-set?": "weight" }
+    doneSessions: {} // { "cycle-sessionIdx": true }
+  };
+
+  let ready = false;
+  let storageMode = 'memory'; // 'api' | 'local' | 'memory'
+  let saveFailedOnce = false;
+  const LS_KEY = 'backSafeState_v1';
+
+  const hasStorageApi = (typeof window.storage !== 'undefined')
+    && typeof window.storage.get === 'function'
+    && typeof window.storage.set === 'function';
+
+  function setBanner(msg){
+    const banner = document.getElementById('storageBanner');
+    if(!banner) return;
+    if(msg){ banner.textContent = '⚠ ' + msg; banner.style.display = 'block'; }
+    else { banner.style.display = 'none'; }
+  }
+
+  async function testApiConnection(){
+    if(!hasStorageApi) return false;
+    try{
+      const probe = String(Date.now());
+      const setRes = await window.storage.set('backSafeHealthcheck', probe, false);
+      if(!setRes) return false;
+      const getRes = await window.storage.get('backSafeHealthcheck', false);
+      return !!(getRes && getRes.value === probe);
+    }catch(e){ return false; }
+  }
+
+  function testLocalStorage(){
+    try{
+      const probe = String(Date.now());
+      localStorage.setItem('backSafeProbe', probe);
+      const ok = localStorage.getItem('backSafeProbe') === probe;
+      localStorage.removeItem('backSafeProbe');
+      return ok;
+    }catch(e){ return false; }
+  }
+
+  async function loadState(){
+    // 1) Try the Claude storage API
+    const apiOk = await testApiConnection();
+    if(apiOk){
+      storageMode = 'api';
+      try{
+        const res = await window.storage.get('backSafeState', false);
+        if(res && res.value) applyLoadedState(res.value);
+      }catch(e){ /* nothing saved yet */ }
+    } else if(testLocalStorage()){
+      // 2) Fall back to plain browser localStorage — no API involved at all
+      storageMode = 'local';
+      try{
+        const raw = localStorage.getItem(LS_KEY);
+        if(raw) applyLoadedState(raw);
+      }catch(e){ /* nothing saved yet */ }
+    } else {
+      storageMode = 'memory';
+    }
+
+    if(storageMode === 'memory'){
+      setBanner("This browser won't let the app save anything automatically. Use \u201cSave backup\u201d in Settings before you close this tab, and \u201cLoad backup\u201d next time to pick up where you left off.");
+    } else if(storageMode === 'local'){
+      setBanner(null);
+    } else {
+      setBanner(null);
+    }
+
+    ready = true;
+    updateStorageStatusUI();
+    renderAll();
+  }
+
+  function applyLoadedState(rawJson){
+    const parsed = JSON.parse(rawJson);
+    state = {
+      settings: {...DEFAULT_SETTINGS, ...(parsed.settings||{})},
+      overrides: parsed.overrides || {},
+      logs: parsed.logs || {},
+      doneSessions: parsed.doneSessions || {}
+    };
+  }
+
+  let saveTimer = null;
+  function saveState(){
+    clearTimeout(saveTimer);
+    saveTimer = setTimeout(async ()=>{
+      const json = JSON.stringify(state);
+      if(storageMode === 'api'){
+        try{
+          const res = await window.storage.set('backSafeState', json, false);
+          if(!res) throw new Error('null result');
+        }catch(e){
+          // API stopped working mid-session — drop to localStorage if possible, else memory
+          if(testLocalStorage()){
+            storageMode = 'local';
+            try{ localStorage.setItem(LS_KEY, json); }catch(e2){ storageMode = 'memory'; }
+          } else {
+            storageMode = 'memory';
+          }
+          if(storageMode === 'memory' && !saveFailedOnce){
+            saveFailedOnce = true;
+            setBanner("Autosave stopped working. Use \u201cSave backup\u201d in Settings before you close this tab.");
+            showToast("Switched to local saving");
+          }
+          updateStorageStatusUI();
+        }
+      } else if(storageMode === 'local'){
+        try{ localStorage.setItem(LS_KEY, json); }
+        catch(e){
+          storageMode = 'memory';
+          if(!saveFailedOnce){
+            saveFailedOnce = true;
+            setBanner("Autosave stopped working. Use \u201cSave backup\u201d in Settings before you close this tab.");
+          }
+          updateStorageStatusUI();
+        }
+      }
+      // if storageMode === 'memory', nothing to do — data only lives in this session
+    }, 250);
+  }
+
+  function round(val, inc){
+    if(!inc || inc <= 0) inc = 1;
+    return Math.round(val / inc) * inc;
+  }
+
+  function getTM(lift, cycleNum){
+    const s = state.settings;
+    const base = lift==="bench" ? s.benchTM : lift==="ohp" ? s.ohpTM : s.legTM;
+    const inc  = lift==="bench" ? s.benchInc : lift==="ohp" ? s.ohpInc : s.legInc;
+    let tm = null;
+    for(let c=1; c<=cycleNum; c++){
+      const ov = state.overrides[c] && state.overrides[c][lift];
+      if(c === 1){
+        tm = (ov !== undefined && ov !== null && ov !== "") ? parseFloat(ov) : base;
+      } else {
+        tm = (ov !== undefined && ov !== null && ov !== "") ? parseFloat(ov) : (tm + inc);
+      }
+    }
+    return tm;
+  }
+
+  function roundFor(lift){
+    return lift === "leg" ? state.settings.roundLeg : state.settings.roundBarbell;
+  }
+
+  function showToast(msg){
+    const t = document.getElementById('toast');
+    t.textContent = msg;
+    t.classList.add('show');
+    clearTimeout(t._timer);
+    t._timer = setTimeout(()=>t.classList.remove('show'), 1600);
+  }
+
+  // ---------- Navigation ----------
+  document.querySelectorAll('.nav-item').forEach(btn=>{
+    btn.addEventListener('click', ()=>{
+      document.querySelectorAll('.nav-item').forEach(b=>b.classList.remove('active'));
+      document.querySelectorAll('.screen').forEach(s=>s.classList.remove('active'));
+      btn.classList.add('active');
+      document.getElementById('screen-'+btn.dataset.screen).classList.add('active');
+      if(btn.dataset.screen === 'schedule') renderSchedule();
+      if(btn.dataset.screen === 'cycles') renderCycles();
+      window.scrollTo(0,0);
+    });
+  });
+
+  document.querySelectorAll('.subtab').forEach(t=>{
+    t.addEventListener('click', ()=>{
+      document.querySelectorAll('.subtab').forEach(x=>x.classList.remove('active'));
+      t.classList.add('active');
+      document.getElementById('sub-tracker').style.display = t.dataset.sub === 'tracker' ? 'block' : 'none';
+      document.getElementById('sub-calc').style.display = t.dataset.sub === 'calc' ? 'block' : 'none';
+    });
+  });
+
+  // ---------- Workout screen ----------
+  function renderWorkout(){
+    const s = state.settings;
+    const sess = SESSIONS[s.currentSession];
+    const wave = WAVE_ORDER[sess.occurrence - 1];
+    const waveDef = WAVES[wave];
+    const isDeload = wave === "Deload";
+    const cycle = s.currentCycle;
+
+    document.getElementById('cyclePillNum').textContent = cycle;
+    document.getElementById('wSessionNum').textContent = sess.idx + 1;
+
+    const badgeClass = isDeload ? 'badge-deload' : (sess.workout === 'A' ? 'badge-A' : 'badge-B');
+    const badgeText = isDeload ? 'Deload' : (sess.workout === 'A' ? 'Workout A · Push & Squat' : 'Workout B · Pull & Posterior');
+    document.getElementById('wSessionSub').innerHTML =
+      `<span class="workout-badge ${badgeClass}">${badgeText}</span> &nbsp; <span class="mono" style="font-size:11px;">${waveDef.label}</span>`;
+
+    document.getElementById('deloadFlag').style.display = isDeload ? 'block' : 'none';
+
+    const container = document.getElementById('workoutExercises');
+    container.innerHTML = '';
+
+    mainLiftsFor(sess.workout).forEach(lift=>{
+      const tm = getTM(lift.tmKey, cycle);
+      const inc = roundFor(lift.tmKey);
+      const div = document.createElement('div');
+      div.className = 'exercise main';
+      let setsHtml = '';
+      waveDef.sets.forEach((set, i)=>{
+        const weight = round(tm * set.pct, inc);
+        const logKey = `${cycle}-${sess.idx}-${lift.key}-set${i}`;
+        const savedVal = state.logs[logKey] || '';
+        setsHtml += `
+          <div class="set-row">
+            <div class="set-idx">${i+1}</div>
+            <div class="plate">${weight}<span class="unit">kg</span></div>
+            <div class="set-reps">${set.reps} reps</div>
+            <div class="set-pct">${Math.round(set.pct*100)}%</div>
+            <input class="used-input" data-logkey="${logKey}" type="number" inputmode="decimal" placeholder="used" value="${savedVal}">
+          </div>`;
+      });
+      div.innerHTML = `
+        <div class="exercise-name">${lift.name}</div>
+        <div class="exercise-cue">${lift.cue}</div>
+        ${setsHtml}`;
+      container.appendChild(div);
+    });
+
+    const accWrap = document.createElement('div');
+    accWrap.className = 'exercise';
+    let accHtml = '<div class="exercise-name">Accessories</div>';
+    accessoriesFor(sess.workout).forEach(acc=>{
+      const logKey = `${cycle}-${sess.idx}-${acc.key}`;
+      const savedVal = state.logs[logKey] || '';
+      accHtml += `
+        <div class="accessory-row">
+          <div>
+            <div style="font-size:13.5px; font-weight:600;">${acc.name}</div>
+            <div class="accessory-meta">${acc.meta}${acc.cue ? ' · ' + acc.cue : ''}</div>
+          </div>
+          <input class="used-input" style="max-width:78px; flex:none;" data-logkey="${logKey}" type="number" inputmode="decimal" placeholder="kg" value="${savedVal}">
+        </div>`;
+    });
+    accWrap.innerHTML = accHtml;
+    container.appendChild(accWrap);
+
+    container.querySelectorAll('.used-input').forEach(inp=>{
+      inp.addEventListener('change', ()=>{
+        state.logs[inp.dataset.logkey] = inp.value;
+        saveState();
+      });
+    });
+
+    document.getElementById('advanceBtn').textContent =
+      sess.idx === 7 ? 'Finish Cycle & Start Next →' : 'Next Session →';
+  }
+
+  document.getElementById('prevSessionBtn').addEventListener('click', ()=>{
+    const s = state.settings;
+    if(s.currentSession > 0){ s.currentSession--; saveState(); renderWorkout(); }
+  });
+  document.getElementById('nextSessionBtn').addEventListener('click', ()=>{
+    const s = state.settings;
+    if(s.currentSession < 7){ s.currentSession++; saveState(); renderWorkout(); }
+  });
+  document.getElementById('advanceBtn').addEventListener('click', ()=>{
+    const s = state.settings;
+    const key = `${s.currentCycle}-${s.currentSession}`;
+    state.doneSessions[key] = true;
+    if(s.currentSession < 7){
+      s.currentSession++;
+      saveState();
+      renderWorkout();
+      showToast('Session logged');
+    } else {
+      openConfirm(
+        'Finish this cycle?',
+        `This moves you into Cycle ${s.currentCycle + 1}. Training Maxes update automatically — check the Cycles tab first if you want to enter real numbers instead of the projection.`,
+        ()=>{
+          s.currentCycle++;
+          s.currentSession = 0;
+          saveState();
+          renderAll();
+          showToast(`Cycle ${s.currentCycle} started`);
+        }
+      );
+    }
+  });
+
+  // ---------- Schedule screen ----------
+  function renderSchedule(){
+    const s = state.settings;
+    const cycle = s.currentCycle;
+    const wrap = document.getElementById('scheduleList');
+    wrap.innerHTML = '';
+    SESSIONS.forEach(sess=>{
+      const wave = WAVE_ORDER[sess.occurrence - 1];
+      const isDeload = wave === "Deload";
+      const isToday = sess.idx === s.currentSession;
+      const item = document.createElement('div');
+      item.className = 'acc-item' + (isToday ? ' today' : '');
+      const badgeClass = isDeload ? 'badge-deload' : (sess.workout === 'A' ? 'badge-A' : 'badge-B');
+      const badgeText = isDeload ? 'Deload' : ('Workout ' + sess.workout);
+
+      let exList = '';
+      mainLiftsFor(sess.workout).forEach(lift=>{
+        const tm = getTM(lift.tmKey, cycle);
+        const inc = roundFor(lift.tmKey);
+        const top = round(tm * WAVES[wave].sets[2].pct, inc);
+        exList += `<div class="mini-ex"><b>${lift.name}</b> — top set ${top}kg</div>`;
+      });
+      accessoriesFor(sess.workout).forEach(acc=>{
+        exList += `<div class="mini-ex">${acc.name} <span class="muted">(${acc.meta})</span></div>`;
+      });
+
+      item.innerHTML = `
+        <div class="acc-head">
+          <div class="left">
+            <span class="acc-num">S${sess.idx+1}</span>
+            <span class="workout-badge ${badgeClass}">${badgeText}</span>
+            <span class="mono muted" style="font-size:11px;">${WAVES[wave].label}</span>
+            ${isToday ? '<span class="today-tag">TODAY</span>' : ''}
+          </div>
+          <div class="chev">▾</div>
+        </div>
+        <div class="acc-body">${exList}</div>`;
+      item.querySelector('.acc-head').addEventListener('click', ()=>{
+        item.classList.toggle('open');
+      });
+      if(isToday) item.classList.add('open');
+      wrap.appendChild(item);
+    });
+  }
+
+  // ---------- Cycles screen ----------
+  function renderCycles(){
+    const s = state.settings;
+    const current = s.currentCycle;
+    const wrap = document.getElementById('cycleList');
+    wrap.innerHTML = '';
+    const lastCycle = current + 4;
+    for(let c=1; c<=lastCycle; c++){
+      const bench = getTM("bench", c).toFixed(1);
+      const ohp = getTM("ohp", c).toFixed(1);
+      const leg = getTM("leg", c).toFixed(1);
+      const row = document.createElement('div');
+      row.className = 'cycle-row' + (c === current ? ' current' : '');
+      row.innerHTML = `
+        <div class="cycle-num">${c}</div>
+        <div><span class="cycle-lift-label">Bench</span><span class="cycle-tm">${bench}</span></div>
+        <div><span class="cycle-lift-label">OHP</span><span class="cycle-tm">${ohp}</span></div>
+        <div><span class="cycle-lift-label">Leg Press</span><span class="cycle-tm">${leg}</span></div>`;
+      wrap.appendChild(row);
+    }
+  }
+
+  document.getElementById('startNextCycleBtn').addEventListener('click', ()=>{
+    const s = state.settings;
+    openConfirm(
+      `Start Cycle ${s.currentCycle + 1}?`,
+      'This advances your active cycle without needing to finish all 8 sessions first — use this if you\'re planning ahead. Training Maxes update automatically.',
+      ()=>{
+        s.currentCycle++;
+        s.currentSession = 0;
+        saveState();
+        renderAll();
+        showToast(`Cycle ${s.currentCycle} started`);
+      }
+    );
+  });
+
+  // ---------- Calculator ----------
+  function epley(w, r){ return r <= 1 ? w : w * (1 + r/30); }
+  function brzycki(w, r){ return r <= 1 ? w : (r >= 37 ? null : w * 36 / (37 - r)); }
+
+  function renderCalc(){
+    document.getElementById('calcPct').value = state.settings.calcPct;
+  }
+
+  function runCalc(){
+    const w = parseFloat(document.getElementById('calcWeight').value);
+    const r = parseFloat(document.getElementById('calcReps').value);
+    const pct = parseFloat(document.getElementById('calcPct').value) || 90;
+    if(!w || !r){
+      document.getElementById('calcResult1rm').textContent = '—';
+      document.getElementById('calcResultTM').textContent = '—';
+      document.getElementById('calcBrzycki').textContent = '';
+      return;
+    }
+    const e1rm = epley(w, r);
+    const b1rm = brzycki(w, r);
+    const tm = e1rm * (pct/100);
+    document.getElementById('calcResult1rm').textContent = e1rm.toFixed(1);
+    document.getElementById('calcResultTM').textContent = tm.toFixed(1);
+    document.getElementById('calcBrzycki').textContent = b1rm ? `Brzycki estimate: ${b1rm.toFixed(1)}kg (for comparison)` : '';
+  }
+  ['calcWeight','calcReps','calcPct'].forEach(id=>{
+    document.getElementById(id).addEventListener('input', runCalc);
+  });
+
+  document.getElementById('saveOverrideBtn').addEventListener('click', ()=>{
+    const lift = document.getElementById('calcLift').value;
+    const tmText = document.getElementById('calcResultTM').textContent;
+    if(tmText === '—'){ showToast('Enter weight & reps first'); return; }
+    const c = state.settings.currentCycle;
+    state.overrides[c] = state.overrides[c] || {};
+    state.overrides[c][lift] = parseFloat(tmText);
+    state.settings.calcPct = parseFloat(document.getElementById('calcPct').value) || 90;
+    saveState();
+    showToast(`Saved as Cycle ${c} override`);
+    renderCycles();
+  });
+
+  document.getElementById('saveStartingBtn').addEventListener('click', ()=>{
+    const lift = document.getElementById('calcLift').value;
+    const tmText = document.getElementById('calcResultTM').textContent;
+    if(tmText === '—'){ showToast('Enter weight & reps first'); return; }
+    const val = parseFloat(tmText);
+    if(lift === 'bench') state.settings.benchTM = val;
+    if(lift === 'ohp') state.settings.ohpTM = val;
+    if(lift === 'leg') state.settings.legTM = val;
+    state.settings.calcPct = parseFloat(document.getElementById('calcPct').value) || 90;
+    saveState();
+    showToast('Starting Training Max updated');
+    renderSettings();
+    renderWorkout();
+  });
+
+  // ---------- Settings ----------
+  const settingFields = {
+    setBenchTM:'benchTM', setOhpTM:'ohpTM', setLegTM:'legTM',
+    setBenchInc:'benchInc', setOhpInc:'ohpInc', setLegInc:'legInc',
+    setRoundBarbell:'roundBarbell', setRoundLeg:'roundLeg'
+  };
+  function renderSettings(){
+    Object.entries(settingFields).forEach(([id,key])=>{
+      document.getElementById(id).value = state.settings[key];
+    });
+  }
+  Object.entries(settingFields).forEach(([id,key])=>{
+    document.getElementById(id).addEventListener('change', (e)=>{
+      const v = parseFloat(e.target.value);
+      if(!isNaN(v)){ state.settings[key] = v; saveState(); renderAll(); showToast('Saved'); }
+    });
+  });
+
+  document.getElementById('resetAllBtn').addEventListener('click', ()=>{
+    openConfirm(
+      'Reset all data?',
+      'This clears every saved weight, override, and setting on this device. This cannot be undone.',
+      async ()=>{
+        state = { settings:{...DEFAULT_SETTINGS}, overrides:{}, logs:{}, doneSessions:{} };
+        saveState();
+        renderAll();
+        showToast('All data reset');
+      }
+    );
+  });
+
+  function updateStorageStatusUI(){
+    const el = document.getElementById('storageStatus');
+    if(!el) return;
+    if(storageMode === 'api'){
+      el.textContent = '● Saving automatically (Claude storage)';
+    } else if(storageMode === 'local'){
+      el.textContent = '● Saving automatically (this browser only — same device, same link)';
+    } else {
+      el.textContent = '● Not saving automatically right now — use the backup buttons below';
+    }
+  }
+
+  document.getElementById('downloadBackupBtn').addEventListener('click', ()=>{
+    try{
+      const json = JSON.stringify(state, null, 2);
+      const blob = new Blob([json], {type:'application/json'});
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = 'backsafe-531-backup.json';
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+      setTimeout(()=>URL.revokeObjectURL(url), 2000);
+      showToast('Backup file saved');
+    }catch(e){
+      showToast("Couldn't save a file here — use Export as text instead");
+    }
+  });
+
+  document.getElementById('loadBackupBtn').addEventListener('click', ()=>{
+    document.getElementById('backupFileInput').click();
+  });
+
+  document.getElementById('backupFileInput').addEventListener('change', (e)=>{
+    const file = e.target.files && e.target.files[0];
+    if(!file) return;
+    const reader = new FileReader();
+    reader.onload = (evt)=>{
+      try{
+        const parsed = JSON.parse(evt.target.result);
+        if(!parsed || typeof parsed !== 'object' || !parsed.settings){
+          showToast("That file doesn't look like a valid backup");
+          return;
+        }
+        state = {
+          settings: {...DEFAULT_SETTINGS, ...(parsed.settings||{})},
+          overrides: parsed.overrides || {},
+          logs: parsed.logs || {},
+          doneSessions: parsed.doneSessions || {}
+        };
+        saveState();
+        renderAll();
+        showToast('Backup loaded');
+      }catch(err){
+        showToast("Couldn't read that file");
+      }
+    };
+    reader.readAsText(file);
+    e.target.value = '';
+  });
+
+  // ---------- Export / Import (text) ----------
+  const dataOverlay = document.getElementById('dataOverlay');
+  const dataTextarea = document.getElementById('dataTextarea');
+  const dataCopyRow = document.getElementById('dataCopyRow');
+  const dataOkBtn = document.getElementById('dataOkBtn');
+
+  document.getElementById('exportBtn').addEventListener('click', ()=>{
+    document.getElementById('dataTitle').textContent = 'Export data';
+    document.getElementById('dataBody').textContent =
+      'Copy this text and save it somewhere safe — a note, an email to yourself, or paste it into a Claude chat and ask for a spreadsheet or PDF backup.';
+    dataTextarea.value = JSON.stringify(state, null, 2);
+    dataTextarea.readOnly = true;
+    dataCopyRow.style.display = 'flex';
+    dataOkBtn.style.display = 'none';
+    dataOverlay.classList.add('show');
+    dataTextarea.focus();
+    dataTextarea.select();
+  });
+
+  document.getElementById('dataCopyBtn').addEventListener('click', async ()=>{
+    dataTextarea.focus();
+    dataTextarea.select();
+    let copied = false;
+    try{
+      await navigator.clipboard.writeText(dataTextarea.value);
+      copied = true;
+    }catch(e){
+      try{ copied = document.execCommand('copy'); }catch(e2){ copied = false; }
+    }
+    showToast(copied ? 'Copied — paste it somewhere safe' : 'Couldn\'t auto-copy — text is selected, copy manually');
+  });
+
+  document.getElementById('importBtn').addEventListener('click', ()=>{
+    document.getElementById('dataTitle').textContent = 'Import data';
+    document.getElementById('dataBody').textContent =
+      'Paste previously exported data below. This replaces everything currently saved on this device.';
+    dataTextarea.value = '';
+    dataTextarea.readOnly = false;
+    dataTextarea.placeholder = 'Paste exported JSON here';
+    dataCopyRow.style.display = 'none';
+    dataOkBtn.style.display = 'block';
+    dataOverlay.classList.add('show');
+    dataTextarea.focus();
+  });
+
+  dataOkBtn.addEventListener('click', ()=>{
+    let parsed;
+    try{
+      parsed = JSON.parse(dataTextarea.value);
+    }catch(e){
+      showToast('That text isn\'t valid — check it was copied in full');
+      return;
+    }
+    if(!parsed || typeof parsed !== 'object' || !parsed.settings){
+      showToast('That doesn\'t look like exported data from this app');
+      return;
+    }
+    state = {
+      settings: {...DEFAULT_SETTINGS, ...(parsed.settings||{})},
+      overrides: parsed.overrides || {},
+      logs: parsed.logs || {},
+      doneSessions: parsed.doneSessions || {}
+    };
+    saveState();
+    renderAll();
+    dataOverlay.classList.remove('show');
+    showToast('Data imported');
+  });
+
+  document.getElementById('dataCancelBtn').addEventListener('click', ()=>{
+    dataOverlay.classList.remove('show');
+  });
+
+  // ---------- Confirm sheet ----------
+  let confirmAction = null;
+  function openConfirm(title, body, onOk){
+    document.getElementById('confirmTitle').textContent = title;
+    document.getElementById('confirmBody').textContent = body;
+    confirmAction = onOk;
+    document.getElementById('confirmOverlay').classList.add('show');
+  }
+  document.getElementById('confirmCancel').addEventListener('click', ()=>{
+    document.getElementById('confirmOverlay').classList.remove('show');
+    confirmAction = null;
+  });
+  document.getElementById('confirmOk').addEventListener('click', ()=>{
+    document.getElementById('confirmOverlay').classList.remove('show');
+    if(confirmAction) confirmAction();
+    confirmAction = null;
+  });
+
+  // ---------- Render all ----------
+  function renderAll(){
+    if(!ready) return;
+    renderWorkout();
+    renderSchedule();
+    renderCycles();
+    renderCalc();
+    runCalc();
+    renderSettings();
+  }
+
+  loadState();
+})();
+</script>
+</body>
+</html>
